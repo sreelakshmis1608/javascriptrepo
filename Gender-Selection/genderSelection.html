@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Selection</title>
+    <link rel="stylesheet" href="genderSelection.css">
+    <script>
+        function selection(gender)
+        {
+           const image=document.getElementById("genderImage");
+           const container=document.getElementById("container");
+
+           if(gender==='male')
+           {
+            image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpUw5Op7johHXwAKOj-jzjh87f85cuq6ve2g&s"
+            container.style.backgroundColor= "blue";
+           }
+           else if(gender==='female')
+           {
+             image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZAUS-GBsdBDbhjDIpzwnBIBy-jOWOSLHnuw&s"
+             container.style.backgroundColor= "pink";
+           }
+           image.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1> Gender Selection</h1>
+        <button onclick="selection('male')">Male</button>
+        <button onclick="selection('female')">Female</button>
+
+        <div id="imageContainer">
+            <img id="genderImage" src="" alt="Gender Image">
+        </div>
+    </div>
+</body>
+</html>
